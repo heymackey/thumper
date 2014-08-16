@@ -1,25 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'thumper'
+require 'thumper/cli'
 
-puts 'Hello World'
-
-connection = Bunny.new
-connection.start
-
-channel = connection.create_channel
-queue   = channel.queue 'local-tester', auto_delete: true
-running = true
-
-Signal.trap('INT') { running = false }
-
-while running do
-  queue.bind(channel.topic('monolith'), routing_key: '#')
-  queue.subscribe(ack: true) do |delivery_info, metadata, payload|
-    event_data = JSON.parse(payload)
-    puts event_data
-    puts "\n"
-  end
-end
-
-connection.close
+Thumper::CLI::Base.start(ARGV)
