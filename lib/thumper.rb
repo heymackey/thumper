@@ -1,3 +1,5 @@
+require "bunny"
+require 'json'
 require "thumper/version"
 
 module Thumper
