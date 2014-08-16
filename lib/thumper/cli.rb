@@ -12,6 +12,7 @@ module Thumper
       desc 'listen <exchange name>', 'Listen to a RabbitMQ exchange with <exhange name>'
       def listen(name)
         say "Listening to #{name}"
+        say "ctrl-c to stop listening"
 
         connection = Bunny.new
         connection.start

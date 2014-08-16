@@ -21,15 +21,15 @@ Or install it yourself as:
 To listen a RabbitMQ exchange
 
 
-    $ thumper listen exchange-name
+    thumper listen exchange-name
 
-
-`CTRL-C` to stop listening
+    Listening to exchange-name
+    ctrl-c to stop listening
 
 
 ## Contributing
 
-1. Fork it ( https://github.com/danielmacket/thumper/fork )
+1. Fork it ( https://github.com/danielmackey/thumper/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
