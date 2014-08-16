@@ -26,7 +26,6 @@ module Thumper
         while running do
           queue.bind(channel.topic(name), routing_key: '#')
           queue.subscribe(ack: true) do |delivery_info, metadata, payload|
-            event_data = JSON.parse(payload)
             puts "delivery_info: #{delivery_info[:routing_key]}"
             puts "metadata: #{metadata}"
             puts "payload: #{payload}"
