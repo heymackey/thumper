@@ -27,6 +27,15 @@ To listen a RabbitMQ exchange
     ctrl-c to stop listening
 
 
+## TODO
+
+- Add support for multiple exchanges
+- Add support for specifying types of exchanges (only topic supported now)
+- Add support for custom routing queues
+- Better delivery_info and metadata output
+- Better payload support
+- Specs
+
 ## Contributing
 
 1. Fork it ( https://github.com/danielmackey/thumper/fork )
