@@ -46,4 +46,4 @@ To listen a RabbitMQ exchange
 
 ## Credits
 
-[@jdoconnor](@jdoconnor) for the concept and initial connection code
+[@jdoconnor](https://github.com/jdoconnor) for the concept and initial connection code
