@@ -47,3 +47,5 @@ To listen a RabbitMQ exchange
 ## Credits
 
 [@jdoconnor](https://github.com/jdoconnor) for the concept and initial connection code
+[@darbyfrey](https://github.com/darbyfrey) for thor/cli guidance
+[@bellycard](https://github.com/bellycard) for hacktime
