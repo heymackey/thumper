@@ -28,7 +28,12 @@ module Thumper
           queue.subscribe(ack: true) do |delivery_info, metadata, payload|
             puts "delivery_info: #{delivery_info[:routing_key]}"
             puts "metadata: #{metadata}"
-            puts "payload: #{payload}"
+            if metadata[:content_type] == 'application/json'
+              json = JSON.parse(payload)
+              puts JSON.pretty_generate(json)
+            else
+              puts "payload: #{payload}"
+            end
             puts "\n"
           end
         end
