@@ -9,12 +9,12 @@ module Thumper
         say Thumper::VERSION
       end
 
-      desc 'listen <exchange name>', 'Listen to a RabbitMQ exchange with <exhange name>'
-      def listen(name)
+      desc 'listen <exchange name> [<host name>]', 'Listen to a RabbitMQ exchange with <exhange name> on [<host name>||localhost]'
+      def listen(name, host = nil)
         say "Listening to #{name}"
         say "ctrl-c to stop listening"
 
-        connection = Bunny.new
+        connection = Bunny.new(host)
         connection.start
 
         channel = connection.create_channel
