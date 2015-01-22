@@ -25,7 +25,7 @@ module Thumper
 
         while running do
           queue.bind(channel.topic(name), routing_key: '#')
-          queue.subscribe(ack: true) do |delivery_info, metadata, payload|
+          queue.subscribe(manual_ack: true) do |delivery_info, metadata, payload|
             puts "delivery_info: #{delivery_info[:routing_key]}"
             puts "metadata: #{metadata}"
             if metadata[:content_type] == 'application/json'
